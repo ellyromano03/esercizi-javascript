@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+ 
+  <p>Before the script...</p>
+  <script>
+    
+ 
+    let n=prompt("Quanti valori vuoi inserire?","")
+    let val = [];
+    let som=0,a,max,conv;
+    let somNeg=0;
+    for(let i=0;i<n;i++){
+        outer: while(true){
+            a=prompt("metti un valore:","")
+            a=parseInt(a);
+            if (a>-51 && a<50){
+                break outer;
+            }
+        }
+        val.push(a);
+        if (val[i]>=val[i-1] && i!=0){
+            max= val[i]
+        }
+        if(val[i]<0){
+            somNeg+= val[i]
+        }
+        som+=val[i];
+    }
+    let media= som/n;
+    alert(`Il valore massimo è: ${max}, la media è: ${media} e la somma dei negativi è: ${somNeg}`)
+  </script>
+ 
+  <p>...After the script.</p>
+ 
+</body>
+ 
+</html>
